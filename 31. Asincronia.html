@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asíncronia en JavaScript</title>
+  </head>
+  <body>
+    <h1
+      style="
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: darkorange;
+        font-family: Verdana Pro;
+      "
+    >
+      Asíncronia en JavaScript
+    </h1>
+    <script>
+      //Temporizadores (setTimeout & setInterval)
+      console.log("Inicio");
+      setTimeout(() => {
+        console.log("Ejecutando un setTimeOut, esto se ejecuta una sola vez.");
+      }, 1000);
+      setInterval(() => {
+        console.log(
+          "Ejecutando un setInterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo"
+        );
+      }, 1000);
+
+      setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      }, 1000);
+
+      let temporizador = setTimeout(() => {
+        console.log(new Date().toLocaleTimeString());
+      }, 1000);
+      clearTimeout(temporizador);
+
+      //Asincronía y el Event Loop
+      /*  Antes de explicar como funciona el modelo de JavaScript es importante entender algunos conceptos:
+        1. Procesamiento Single Thread y Multi Thread:
+        Single Thread: Se refiere a la ejecución de una tarea a la vez.
+        Multi Thread: Implica la ejecución simultánea de múltiples tareas, lo que puede mejorar la eficiencia en ciertos casos.
+
+        2. Operaciones de CPU y Operaciones de I/O:
+        Operaciones de CPU: Tareas que dependen principalmente del poder de procesamiento.
+        Operaciones de I/O: Tareas que involucran la entrada/salida, como leer/escribir en disco o interactuar con la red.
+
+        3. Operaciones Concurrentes y Paralelas:
+        Concurrentes: Tareas que pueden empezar, ejecutarse y completarse en períodos superpuestos.
+        Paralelas: Tareas que realmente se ejecutan simultáneamente.
+
+        4. Operaciones Bloqueantes y No Bloqueantes:
+        Bloqueantes: Detienen la ejecución del programa hasta que se complete la operación.
+        No Bloqueantes: Permite que el programa continúe mientras espera que se complete una operación.
+        
+        5. Operaciones Síncronas y Asíncronas:
+        Síncronas: Se ejecutan en secuencia, una después de la otra.
+        Asíncronas: No esperan a que una operación se complete antes de pasar a la siguiente, lo que permite la ejecución concurrente.
+
+     Javascript usa un modelo asíncrono y no bloqueante, con un loop de eventos implementado en un sólo hilo, (single thread) para operaciones de entrada y salida (input/output).
+     */
+    </script>
+  </body>
+</html>
