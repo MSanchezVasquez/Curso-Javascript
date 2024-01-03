@@ -1,0 +1,11 @@
+{
+  "cadena": "Moises",
+  "numero": 23,
+  "booleano": true,
+  "arreglo": ["correr", "programar", "cocinar"],
+  "objeto": {
+    "twitter": "@moiSanc",
+    "email": "moisesup.25@gmail.com"
+  },
+  "nulo": null
+}
