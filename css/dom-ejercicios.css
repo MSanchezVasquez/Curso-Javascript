@@ -83,7 +83,7 @@ img {
   /* De arriba */
   transform: translate(0, -100%);
   /* De abajo */
-  /* transform: translate(0, 100%); */
+  /*transform: translate(0, 100%);*/
   /* De la derecha */
   /* transform: translate(100%, 0); */
   /* De la izquierda */
@@ -91,7 +91,7 @@ img {
 }
 
 .panel.is-active {
-  transform: translate(0, 0);
+  /*transform: translate(0, 0);*/
   opacity: 1;
   visibility: visible;
 }
@@ -134,4 +134,19 @@ img {
   font-weight: bold;
   color: var(--second-color);
   background-color: var(--main-modal-color);
+}
+
+/*********** Eventos del Teclado ********/
+.stage {
+  display: flex;
+  min-height: 50vh;
+  background-color: var(--second-color);
+}
+
+.ball {
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--main-color);
 }
